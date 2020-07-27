@@ -1,18 +1,17 @@
 {% set name = "shtns" %}
-{% set version = "3.3.1" %}
-{% set revision = "r694" %}
+{% set version = "3.4.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  - url: https://www.bitbucket.org/nschaeff/{{ name }}/downloads/{{ name }}-{{ version }}-{{ revision }}.tar.gz
-    sha256: 3fcca0ffcf28467fd80ef71e0032c15ac6deac5c592041dc6a9a7f4575fbe64c
+  - url: https://www.bitbucket.org/nschaeff/{{ name }}/downloads/{{ name }}-{{ version }}.tar.gz
+    sha256: fd856ce6c57d7df4c403c1654b99da9a89ead93276b30dd48ba2c72acf463eaf
     folder: src
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -45,7 +44,7 @@ about:
     geometries.
 
   doc_url: https://nschaeff.bitbucket.io/shtns/
-  dev_url: https://github.com/simplejson/simplejson
+  dev_url: https://nschaeff.bitbucket.io/shtns/
 
 extra:
   recipe-maintainers:
