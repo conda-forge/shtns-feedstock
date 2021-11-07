@@ -5,7 +5,7 @@ c_compiler:
 c_compiler_version:
 - '11'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 fftw:
@@ -13,7 +13,7 @@ fftw:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.17'
+- '1.21'
 pin_run_as_build:
   fftw:
     max_pin: x
@@ -21,7 +21,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.10.* *_cpython
 target_platform:
 - osx-64
 zip_keys:
