@@ -1,5 +1,5 @@
 {% set name = "shtns" %}
-{% set version = "3.4.2" %}
+{% set version = "3.6.1" %}
 
 package:
   name: {{ name|lower }}
