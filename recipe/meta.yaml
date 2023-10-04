@@ -19,12 +19,12 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
-  host:
     - fftw
+  host:
     - numpy
-    - python
     - setuptools
   run:
+    - python
     - fftw
     - {{ pin_compatible('numpy') }}
 
