@@ -19,16 +19,14 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
-    - numpy
-    - setuptools
   host:
     - fftw
     - numpy
     - python
+    - setuptools
   run:
     - fftw
     - {{ pin_compatible('numpy') }}
-    - python
 
 test:
   imports:
