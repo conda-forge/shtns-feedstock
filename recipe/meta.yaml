@@ -19,6 +19,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
+    - numpy
     - setuptools
   host:
     - fftw
