@@ -21,4 +21,4 @@ echo "'gcc' script created in the current directory."
 export PATH=$PWD:$PATH
 
 # install the package
-python setup.py install
+python -m pip install . -vv

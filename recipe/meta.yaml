@@ -25,6 +25,7 @@ requirements:
     - fftw
     - numpy
     - setuptools
+    - pip
   run:
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
