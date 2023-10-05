@@ -1,5 +1,5 @@
 {% set name = "shtns" %}
-{% set version = "3.4.2" %}
+{% set version = "3.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   - url: https://www.bitbucket.org/nschaeff/{{ name }}/downloads/{{ name }}-{{ version }}.tar.gz
-    sha256: fd856ce6c57d7df4c403c1654b99da9a89ead93276b30dd48ba2c72acf463eaf
+    sha256: 6609041baa2faa4199b1b09892748ffc0e5ee04d0c89fc17c34dc1c1e9193d41
     folder: src
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
 
 requirements:
@@ -20,13 +20,18 @@ requirements:
     - {{ compiler('c') }}
     - make
   host:
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
     - fftw
     - numpy
-    - python
+    - setuptools
+    - pip
   run:
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
+    - python
     - fftw
     - {{ pin_compatible('numpy') }}
-    - python
 
 test:
   imports:
