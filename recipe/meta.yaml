@@ -19,10 +19,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
-    - fftw
+  host:
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
-  host:
+    - fftw
     - numpy
     - setuptools
   run:
