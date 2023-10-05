@@ -20,10 +20,14 @@ requirements:
     - {{ compiler('c') }}
     - make
     - fftw
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   host:
     - numpy
     - setuptools
   run:
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
     - python
     - fftw
     - {{ pin_compatible('numpy') }}
