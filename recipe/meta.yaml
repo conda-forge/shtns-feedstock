@@ -11,13 +11,14 @@ source:
     folder: src
 
 build:
-  number: 4
+  number: 5
   skip: true  # [win]
 
 requirements:
 
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - llvm-openmp  # [osx]
@@ -31,7 +32,6 @@ requirements:
     - libgomp      # [linux]
     - python
     - fftw
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
